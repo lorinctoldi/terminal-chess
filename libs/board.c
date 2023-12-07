@@ -98,7 +98,7 @@ void displayBoard(char **board)
         printf("♕ ");
         break;
       case 'k':
-        printf("♔ ");
+        printf("%c%c%c ", 0xE2,0x99,0x94);
         break;
       case 'p':
         printf("♙ ");
