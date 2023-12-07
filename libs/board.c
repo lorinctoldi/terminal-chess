@@ -1,5 +1,9 @@
 #include "board.h"
 
+#ifdef _WIN32
+#include <windows.h>
+#endif
+
 // make the starting board
 void resetBoard(char ***board)
 {
@@ -11,19 +15,7 @@ void resetBoard(char ***board)
       {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
       {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
       {'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
-      {'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'}
-    };
-  // check for stalemate
-  // char initialBoard[8][8] = {
-  //     {' ', ' ', ' ', ' ', 'k', ' ', ' ', ' '},
-  //     {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-  //     {' ', ' ', ' ', 'Q', ' ', 'Q', ' ', ' '},
-  //     {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-  //     {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-  //     {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-  //     {'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
-  //     {'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'}
-  //   };
+      {'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'}};
 
   // allocate memory for the board
   *board = (char **)malloc(8 * sizeof(char *));
@@ -60,6 +52,10 @@ void freeBoard(char ***board)
 // display the board
 void displayBoard(char **board)
 {
+  #ifdef _WIN32
+  SetConsoleOutputCP(CP_UTF8);
+  #endif
+
   for (int i = 0; i < 8; i++)
   {
     printf("%d | ", 8 - i);
@@ -98,7 +94,7 @@ void displayBoard(char **board)
         printf("♕ ");
         break;
       case 'k':
-        printf("%c%c%c ", 0xE2,0x99,0x94);
+        printf("♔ ");
         break;
       case 'p':
         printf("♙ ");
