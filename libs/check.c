@@ -217,13 +217,14 @@ int checkMove(char **board, int current, char side, GameStruct *match)
   int destinationRank = match->moves[current].destination[0] - 'a';
   int destinationFile = 7 - (match->moves[current].destination[1] - '1');
 
-  if(board[destinationFile][destinationRank] == 'k'|| board[destinationFile][destinationRank] == 'K') {
-    return error(101);
-  }
 
   // give error if the move is out of board
   if (!isMoveOnBoard(sourceRank, sourceFile) || !isMoveOnBoard(destinationRank, destinationFile)) {
     return error(3);
+  }
+  
+  if(board[destinationFile][destinationRank] == 'k'|| board[destinationFile][destinationRank] == 'K') {
+    return error(101);
   }
 
   // give error if the target square is the same as the starting sqaure
