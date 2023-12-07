@@ -61,14 +61,8 @@ GameStruct load(void)
     char line[4096];
     while (fgets(line, sizeof(line), file))
     {
-        // check for white player's elo
-        if (strstr(line, "[WhiteElo") != NULL)
-            sscanf(line, "[WhiteElo \"%d\"]", &match.whiteElo);
-        // check for black player's elo
-        else if (strstr(line, "[BlackElo") != NULL)
-            sscanf(line, "[BlackElo \"%d\"]", &match.blackElo);
         // check for white player's name
-        else if (strstr(line, "[White \"") != NULL)
+        if (strstr(line, "[White \"") != NULL)
             sscanf(line, "[White \"%[^\"]\"]", match.white);
         // check for black player's name
         else if (strstr(line, "[Black \"") != NULL)

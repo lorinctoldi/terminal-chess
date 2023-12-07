@@ -1,5 +1,3 @@
 [White "Proba Jatekos 1"]
 [Black "Proba Jatekos 2"]
-[WhiteElo "1000"]
-[BlackElo "1100"]
 1.e2-e4 2.e7-e5 3.f1-b5 4.f8-b4 5.g1-f3 6.g8-f6 7.e1-g1 

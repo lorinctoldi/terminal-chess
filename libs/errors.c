@@ -35,6 +35,8 @@ enum ErrorCode
 
   QUEEN_MOVE = 91,
   QUEEN_BLOCKED = 92,
+
+  KING_ON_TOP = 101
 };
 
 // print error by code and wait 3 sec
@@ -116,6 +118,9 @@ int error(int error_code)
     break;
   case KING_N_KING:
     printf("Hiba! Ket kiraly nem allhat egymas mellet!");
+    break;
+  case KING_ON_TOP:
+    printf("Hiba! A kiralyt nem lehet leutni!");
     break;
   default:
     printf("Unknown error");

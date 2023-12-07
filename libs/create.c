@@ -15,14 +15,9 @@ GameStruct create(void)
     printf("Feher jatekos neve: ");
     scanf("%[^\n]", match.white);
 
-    printf("Feher jatekos Elo pontszama: ");
-    scanf("%d%*c", &match.whiteElo);
-
+    fflush(stdin);
     printf("Fekete jatekos neve: ");
     scanf("%[^\n]", match.black);
-
-    printf("Fekete jatekos Elo pontszama: ");
-    scanf("%d%*c", &match.blackElo);
 
     // from the start both sides CAN castle
     match.whiteCastle = true;

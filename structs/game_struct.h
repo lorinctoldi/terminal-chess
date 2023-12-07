@@ -14,8 +14,6 @@ typedef struct GameStruct
   ChessMove *moves;       // list of moves
   char white[256];        // white player's name
   char black[256];        // black player's name
-  int whiteElo;           // white player's elo
-  int blackElo;           // black player's elo
   int numMoves;           // black player's name
   int next;               // next player to step (0-w, 1-b)
   bool whiteCastle;       // white ability to castle

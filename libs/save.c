@@ -26,9 +26,6 @@ int save(GameStruct match)
   fprintf(file, "[White \"%s\"]\n", match.white);
   fprintf(file, "[Black \"%s\"]\n", match.black);
 
-  fprintf(file, "[WhiteElo \"%d\"]\n", match.whiteElo);
-  fprintf(file, "[BlackElo \"%d\"]\n", match.blackElo);
-
   // write the moves to the file in the required format (if there are moves)
   for (int i = 0; i < match.numMoves; i++)
   {
