@@ -33,12 +33,11 @@ int isKingInCheck(char **board, char side)
     int ni = kingFile + knightMoves[move][0];
     int nj = kingRank + knightMoves[move][1];
 
-    if (ni >= 0 && ni < 8 && nj >= 0 && nj < 8)
+    if (!(ni >= 0 && ni < 8 && nj >= 0 && nj < 8)) continue;
+    
+    if (board[ni][nj] == (side == 'b' ? 'N' : 'n'))
     {
-      if (board[ni][nj] == (side == 'b' ? 'N' : 'n'))
-      {
-        return 1;
-      }
+      return 1;
     }
   }
 
@@ -206,10 +205,10 @@ int validKingMove(char **board, int sourceFile, int sourceRank, int destinationF
   // check whether we hit our own piece
   char destination = board[destinationFile][destinationRank];
   char opponentPieces[] = {'p', 'r', 'n', 'q', 'k', 'b'};
-  char targetPiece = (side == 'b') ? destination : toupper(destination);
+  char targetPiece = destination;
 
   for (int i = 0; i < 6; i++)
-    if (targetPiece == opponentPieces[i])
+    if (targetPiece == (side == 'b' ? opponentPieces[i] : toupper(opponentPieces[i])))
       return 5;
 
   // if there are no early returns, return 0 (0 -> valid move)

@@ -27,10 +27,10 @@ int validQueenMove(char **board, int sourceFile, int sourceRank, int destination
   // check whether the target is your own peace
   char destination = board[destinationFile][destinationRank];
   char opponentPieces[] = {'p', 'r', 'n', 'q', 'k', 'b'};
-  char targetPiece = (side == 'b') ? destination : toupper(destination);
+  char targetPiece = destination;
 
   for (int i = 0; i < 6; i++)
-    if (targetPiece == opponentPieces[i])
+    if (targetPiece == (side == 'b' ? opponentPieces[i] : toupper(opponentPieces[i])))
       return 5;
 
   // if there are no early returns, return 0 (0 -> valid move)

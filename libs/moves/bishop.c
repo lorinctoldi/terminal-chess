@@ -27,10 +27,10 @@ int validBishopMove(char **board, int sourceFile, int sourceRank, int destinatio
 
   // check whether the target if your own peace
   char opponentPieces[] = {'p', 'r', 'n', 'q', 'k', 'b'};
-  char targetPiece = (side == 'b') ? destination : toupper(destination);
+  char targetPiece = destination;
 
   for (int i = 0; i < 6; i++)
-    if (targetPiece == opponentPieces[i])
+        if (targetPiece == (side == 'b' ? opponentPieces[i] : toupper(opponentPieces[i])))
       return 5;
 
   // if there are no early returns, return 0 (0 -> valid move)

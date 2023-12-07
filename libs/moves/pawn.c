@@ -56,11 +56,11 @@ int validPawnMove(char **board, int sourceFile, int sourceRank, int destinationF
     // check whether you want to hit your own piece
     char destination = board[destinationFile][destinationRank];
     char opponentPieces[] = {'p', 'r', 'n', 'q', 'k', 'b'};
-    char targetPiece = (side == 'b') ? destination : toupper(destination);
+    char targetPiece = destination;
 
     for (int i = 0; i < 6; i++)
     {
-      if (targetPiece == opponentPieces[i])
+    if (targetPiece == (side == 'b' ? opponentPieces[i] : toupper(opponentPieces[i])))
         return 5;
     }
 

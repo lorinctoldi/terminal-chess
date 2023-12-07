@@ -28,11 +28,12 @@ ChessMove parseMove(char *move)
 // load game from file
 GameStruct load(void)
 {
-    system("clear");
+    //system("clear"); 
+    printf("\e[2J\e[H");
     printf("A fajl a data nevu mappabol valasztodik ki. \nA jatszma betoltesehez adja meg a file nevet es kiterjeszteset (pl. proba.txt): ");
 
     // read in the file name
-    char filename[256];
+    char filename[250];
     scanf("%s", filename);
 
     // initialize new match

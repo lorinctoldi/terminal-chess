@@ -6,6 +6,7 @@
 #include <string.h>
 #include <stdbool.h>
 
+#include "../board.h"
 #include "../../debugmalloc.h"
 
 // gyalog

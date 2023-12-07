@@ -90,13 +90,12 @@ int legalMovesLeft(char **board, char side, bool castle)
         {
           int ni = file + knightMoves[move][0];
           int nj = rank + knightMoves[move][1];
-
-          if (isMoveOnBoard(nj, ni) &&
-              !validKnightMove(board, file, rank, ni, nj, side) &&
-              !alternate(board, file, rank, ni, nj, side))
-          {
-            return 0;
-          }
+          
+          if(!isMoveOnBoard(nj, ni)) continue;
+          if(validKnightMove(board, file, rank, ni, nj, side)) continue;
+          if (alternate(board, file, rank, ni, nj, side)) continue;
+          
+          return 0;
         }
       }
       // check for bishop's move
@@ -308,7 +307,7 @@ int checkMove(char **board, int current, char side, GameStruct *match)
   // make the move
   board[destinationFile][destinationRank] = board[sourceFile][sourceRank];
   board[sourceFile][sourceRank] = ' ';
-
+  
   // check whether the opponent is mated or whether it is stalemate
   // if we do not check here then he would have to make a step to find out
   // but that seem unlogical...

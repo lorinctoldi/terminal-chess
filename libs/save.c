@@ -4,7 +4,7 @@
 int save(GameStruct match)
 {
   // read filename from user
-  char filename[256];
+  char filename[250];
   printf("File neve: ");
   scanf("%s", filename);
 

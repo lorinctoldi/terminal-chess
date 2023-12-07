@@ -3,7 +3,8 @@
 // create a new game from scratch
 GameStruct create(void)
 {
-    system("clear");
+    //system("clear"); 
+    printf("\e[2J\e[H");
     // clear the buffer
     fflush(stdin);
 

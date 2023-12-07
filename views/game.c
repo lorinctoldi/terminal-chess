@@ -39,7 +39,8 @@ int game(int isLoad)
 
   while(input != -1)
   {
-    system("clear");
+    //system("clear"); 
+    printf("\e[2J\e[H");
     // dispay the board
     displayBoard(board);
 
@@ -182,7 +183,8 @@ int game(int isLoad)
     }
   }
 
-  system("clear");
+  //system("clear"); 
+  printf("\e[2J\e[H");
   // display the board then free it
   displayBoard(board);
   freeBoard(&board);
