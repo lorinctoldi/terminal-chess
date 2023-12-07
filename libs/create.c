@@ -6,7 +6,7 @@ GameStruct create(void)
     //system("clear"); 
     printf("\e[2J\e[H");
     // clear the buffer
-    fflush(stdin);
+    clearBuffer();
 
     // define new game
     GameStruct match = {0};
@@ -15,7 +15,7 @@ GameStruct create(void)
     printf("Feher jatekos neve: ");
     scanf("%[^\n]", match.white);
 
-    fflush(stdin);
+    clearBuffer();
     printf("Fekete jatekos neve: ");
     scanf("%[^\n]", match.black);
 

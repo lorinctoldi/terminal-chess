@@ -8,7 +8,7 @@
 #include "../debugmalloc.h"
 
 #include "../structs/game_struct.h"
-
+#include "../libs/clear.h"
 #include "../libs/create.h"
 #include "../libs/board.h"
 #include "../libs/load.h"

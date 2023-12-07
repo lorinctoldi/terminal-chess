@@ -54,7 +54,7 @@ int game(int isLoad)
     if (scanf("%d", &input) != 1)
     {
       // if the input is not a number clear input buffer and start the loop again
-      fflush(stdin);
+      clearBuffer();
       input = 0;
       continue;
     }

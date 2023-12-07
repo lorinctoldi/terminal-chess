@@ -1,1 +1,1 @@
-gcc -Wall -Werror -o main  main.c views/game.c libs/board.c libs/check.c libs/create.c libs/errors.c libs/load.c libs/move.c libs/save.c libs/moves/bishop.c libs/moves/king.c libs/moves/knight.c libs/moves/pawn.c libs/moves/queen.c libs/moves/rook.c
+gcc -Wall -Werror -o main  main.c views/game.c libs/board.c libs/check.c libs/create.c libs/errors.c libs/load.c libs/clear.c libs/move.c libs/save.c libs/moves/bishop.c libs/moves/king.c libs/moves/knight.c libs/moves/pawn.c libs/moves/queen.c libs/moves/rook.c

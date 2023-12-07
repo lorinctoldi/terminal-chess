@@ -5,6 +5,7 @@
 #include <stdlib.h>
 
 #include "../structs/game_struct.h"
+#include "clear.h"
 
 #include "../debugmalloc.h"
 
