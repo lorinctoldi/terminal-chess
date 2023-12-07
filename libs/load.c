@@ -29,7 +29,8 @@ ChessMove parseMove(char *move)
 GameStruct load(void)
 {
     //system("clear"); 
-    printf("\e[2J\e[H");
+    //printf("\e[2J\e[H");
+    system("clear || cls");
     printf("A fajl a data nevu mappabol valasztodik ki. \nA jatszma betoltesehez adja meg a file nevet es kiterjeszteset (pl. proba.txt): ");
 
     // read in the file name

@@ -67,44 +67,44 @@ void displayBoard(char **board)
     {
       switch (board[i][j])
       {
+      case 'R':
+        printf("♜ ");
+        break;
+      case 'N':
+        printf("♞ ");
+        break;
+      case 'B':
+        printf("♝ ");
+        break;
+      case 'Q':
+        printf("♛ ");
+        break;
+      case 'K':
+        printf("♚ ");
+        break;
+      case 'P':
+        printf("♟ ");
+        break;
       case 'r':
-        printf("\u2656 ");  // Black Rook
+        printf("♖ ");
         break;
-    case 'n':
-        printf("\u2658 ");  // Black Knight
+      case 'n':
+        printf("♘ ");
         break;
-    case 'b':
-        printf("\u2657 ");  // Black Bishop
+      case 'b':
+        printf("♗ ");
         break;
-    case 'q':
-        printf("\u2655 ");  // Black Queen
+      case 'q':
+        printf("♕ ");
         break;
-    case 'k':
-        printf("\u2654 ");  // Black King
+      case 'k':
+        printf("♔ ");
         break;
-    case 'p':
-        printf("\u2659 ");  // Black Pawn
+      case 'p':
+        printf("♙ ");
         break;
-    case 'R':
-        printf("\u265C ");  // White Rook
-        break;
-    case 'N':
-        printf("\u265E ");  // White Knight
-        break;
-    case 'B':
-        printf("\u265D ");  // White Bishop
-        break;
-    case 'Q':
-        printf("\u265B ");  // White Queen
-        break;
-    case 'K':
-        printf("\u265A ");  // White King
-        break;
-    case 'P':
-        printf("\u265F ");  // White Pawn
-        break;
-    case ' ':
-        printf("  ");  // Empty Square
+      case ' ':
+        printf("  ");
         break;
       default:
         printf("%c ", board[i][j]);
