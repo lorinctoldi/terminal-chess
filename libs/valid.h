@@ -1,13 +1,13 @@
-#ifndef MOVES_H
-#define MOVES_H
+#ifndef VALID_H
+#define VALID_H
 
 #include <ctype.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
 
-#include "../board.h"
-#include "../../debugmalloc.h"
+#include "board.h"
+#include "../debugmalloc.h"
 
 // gyalog
 int validPawnMove(char **board, int sourceFile, int sourceRank, int destinationFile, int destinationRank, char side);

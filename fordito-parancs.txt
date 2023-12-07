@@ -1,0 +1,1 @@
+gcc -Wall -Werror -o main  main.c views/game.c libs/board.c libs/check.c libs/create.c libs/errors.c libs/load.c libs/clear.c libs/move.c libs/save.c libs/valid.c

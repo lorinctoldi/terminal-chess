@@ -1,7 +1,7 @@
 #ifndef CHECK_H
 #define CHECK_H
 
-#include "moves/moves.h"
+#include "valid.h"
 #include "./errors.h"
 #include "./board.h"
 
